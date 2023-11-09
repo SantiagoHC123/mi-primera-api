@@ -9,13 +9,18 @@ import { useApi, ApiProvider } from './Contexto/ContextApi.jsx';
 
   return (
     <>
-     <div className="Contenedor">
+     <div className="ContenedorMain">
       <h1>Api para generar personas Random</h1>
-      <img src='https://e7.pngegg.com/pngimages/635/811/png-clipart-men-and-women-mysterious-figure-with-a-question-mark-question-mark-mysterious-person.png' />
-      <div>
+      <div className='generador'>
+      <img className='imagen' src='https://clipart-library.com/img1/1041723.png' />
+      <img  className='imagen'  src='https://clipart-library.com/images_k/girl-silhouette-transparent/girl-silhouette-transparent-25.png' />
+     
+      </div>
+
+      <div className='generador'>
       <button onClick={() => fetchRandomUser('male')}>Generar Hombre</button>
       <button onClick={() => fetchRandomUser('female')}>Generar Mujer</button>
-      </div>
+      </div> 
       {loading ? (
         <p>Cargando...</p>
       ) : (
